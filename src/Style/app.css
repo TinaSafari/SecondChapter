@@ -1,0 +1,94 @@
+#root {
+    text-align: center;
+}
+
+.homeCarousel {
+    margin: auto;
+    height: 27rem;
+    width: 100%;
+}
+img {
+    height: 400px;
+    width: 100px;
+}
+.cart {
+    height: 40px;
+    width:40px;
+}
+#basic-nav-dropdown {
+    color:grey;
+}
+.signInButton {
+    text-align: center;
+}
+.bookshelf {
+    /* height: 35rem; */
+    width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    
+}
+.bookInfo {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    height: auto; 
+}
+.Searchresult {
+    width: 64rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+.userProfile {
+    margin: auto;
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.cartBooks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    height: 30rem; 
+    padding-bottom: 20px;
+}
+.shoppingCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.checkout {
+    margin-top: 5rem;
+    margin-right: 10rem;
+}
+.addressPage{
+    margin: auto;
+    width: 700px;
+}
+.accountSettings {
+    margin: auto;
+    text-align: left;
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bookLogo {
+    width: 60px;
+    height: 60px;
+}
+.checkoutBox {
+    padding-right: 100px;
+     display: flex;
+     justify-content: flex-end;
+}
