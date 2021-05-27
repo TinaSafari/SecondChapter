@@ -9,9 +9,10 @@ const initState = {
     lastName: "",
     creditBalance: 50.0,
   },
-  cart: [{}]
+  cart: []
 };
 
+// ACTION
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const GET_USER = "GET_USER";
@@ -20,7 +21,6 @@ export const LASTNAME = "LASTNAME";
 export const CREDITBALANCE = "CREDITBALANCE";
 export const UPDATEUSER = "UPDATEUSER";
 export const SIGNUP = "SIGNUP";
-
 export const ADDBOOK = "ADDBOOK";
 export const REMOVEBOOK = "REMOVEBOOK";
 
@@ -46,7 +46,7 @@ const reducer = (state, action) => {
     case ADDBOOK:
       return { ...state, cart: [...state.cart, action.payload] };
     case REMOVEBOOK:
-      return { ...state, cart: action.payload };
+      return {...state.cart, cart: state.cart.filter((item) => item !== action.payload) };
     default:
       return state;
   }

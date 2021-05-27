@@ -7,7 +7,7 @@ import SNHUad from '../img/snhu.jpeg'
 function Header() {
     return (
         <div>
-            <Carousel style={{ margin: 'auto', height: '80px', width: '900px' }} >
+            {/* <Carousel style={{ margin: 'auto', height: '80px', width: '900px' }} >
                 <Carousel.Item interval={7000}>
                     <img
                         style={{ height: '80px' }}
@@ -55,7 +55,7 @@ function Header() {
                         </a>
                     </Carousel.Caption>
                 </Carousel.Item>
-            </Carousel>
+            </Carousel> */}
         </div>
     )
 }

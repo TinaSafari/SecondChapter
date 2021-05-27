@@ -6,7 +6,7 @@ import {
   Image,
   Button,
 } from "react-bootstrap";
-import { useStore, REMOVEBOOK } from "../Store/store";
+import { useStore, REMOVEBOOK} from "../Store/store";
 import { Link } from 'react-router-dom'
 
 function Cart() {
@@ -14,12 +14,16 @@ function Cart() {
   const cart = useStore((state) => state.cart);
   let cartTotal = 0;
 
+
   return (
     <>
+    {console.log(cart)
+    }
       <h1>Your Cart</h1>
       <div className='checkoutBox'>
         <div className="checkout">
-          {cart.slice(1, cart.length).forEach((bookInCart) => {
+          {cart.forEach((bookInCart) => {
+            console.log(bookInCart);
             cartTotal += bookInCart.PurchasePrice;
           })}
 
@@ -36,7 +40,7 @@ function Cart() {
           </Card.Body>
         </Card>
       </div>
-      {cart.slice(1, cart.length).map((book) => {
+      {cart.map((book) => {
         return (
           <div className="shoppingCart">
             <div
@@ -68,12 +72,17 @@ function Cart() {
                 </Card.Body>
                 <Card.Footer className="text-muted">
                   <Button
+                  type="submit"
                     variant="outline-dark"
                     style={{ marginTop: "4px" }}
-                    onClick={() => {
-                      cart.splice(cart.indexOf(book), 1);
+                    onClick={(e) => {
+                      e.preventDefault();
+                      cart.splice(cart.indexOf(book), 1)
+                      console.log("deleted:", cart.indexOf(book), 1);
                       dispatch({ type: REMOVEBOOK, payload: cart });
-                    }}
+                      console.log("after dispatch:",cart)
+                    }
+                  }
                   >
                     Remove
                   </Button>

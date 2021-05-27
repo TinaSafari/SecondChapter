@@ -11,7 +11,6 @@ import cartIMG from "../img/shoppingcart.png";
 import { Link } from "react-router-dom";
 import { useStore } from "../Store/store";
 import { useHistory } from "react-router-dom";
-import bookLogo from "../img/bookLogo.png"
 
 function NavBar() {
   const cart = useStore((state) => state.cart);
@@ -32,7 +31,6 @@ function NavBar() {
       <Navbar variant="dark" expand="lg" style={{ backgroundColor: '#caebb7' }}>
         <Navbar.Brand>
           <Link to='/' style={{ textDecoration: 'none' }}>
-            <Image src={bookLogo} style={{ height: '40px', width: '40px' }} />
             <h3 style={{ color: 'grey', fontFamily: "Lucida Console" }}>Second Chapter</h3>
           </Link>
         </Navbar.Brand>
@@ -97,7 +95,7 @@ function NavBar() {
           ""
         )}
         {user.accessToken ? (
-          <h5>{cart.length - 1}</h5>
+          <h5>{cart.length}</h5>
         ) : (
           ""
         )}

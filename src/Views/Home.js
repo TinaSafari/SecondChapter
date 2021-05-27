@@ -13,12 +13,12 @@ function Home() {
 
     return (
         <div className='home'>
-            <div className='missingPerson' >
+            {/* <div className='missingPerson' >
                 <h4 style={{ color: 'red' }}>Have you seen me?</h4>
                 <Image style={{ width: '500px', height: '200px', paddingBottom: '10px', paddingTop: '10px' }} src={bannerImage} fluid />
                 <h4>Last seen at Kenzie Academy</h4>
                 <h4>If so please do not return!</h4>
-            </div>
+            </div> */}
             <div className='homeCarousel'>
                 <Carousel fade>
                     <Carousel.Item interval={4000}>
