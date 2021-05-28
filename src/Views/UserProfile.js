@@ -51,7 +51,7 @@ function UserProfile() {
               Email: {userInfo.user.email}
             </Card.Text>
             <Button onSubmit={handleSubmit} variant="outline-dark">
-              <Link to="/AccountSettings" style={{ color: "black" }}>
+              <Link to="/AccountSettings" style={{ color: "grey" }}>
                 Edit Account Settings
               </Link>
             </Button>
@@ -98,7 +98,7 @@ function UserProfile() {
               Zip Code:
             </Card.Text>
             <Button variant="outline-dark">
-              <Link to="/AddressPage" style={{ color: "black" }}>
+              <Link to="/AddressPage" style={{ color: "grey" }}>
                 Add/Update Address
               </Link>
             </Button>

@@ -28,36 +28,40 @@ function NavBar() {
 
   return (
     <>
-      <Navbar variant="dark" expand="lg" style={{ backgroundColor: '#caebb7' }}>
+      <Navbar variant="dark" expand="lg" 
+      // style={{ backgroundColor: '#b7caeb' }}
+      >
         <Navbar.Brand>
           <Link to='/' style={{ textDecoration: 'none' }}>
-            <h3 style={{ color: 'grey', fontFamily: "Lucida Console" }}>Second Chapter</h3>
+            <h3 
+            style={{ color: 'grey', fontFamily: "Trebuchet MS, sans-serif"}}
+            >Second Chapter</h3>
           </Link>
         </Navbar.Brand>
         <Form inline></Form>
         <NavDropdown
           title={user.accessToken ? `Hi, ${user.user.firstName}` : "My Account"}
           id="basic-nav-dropdown"
-          style={{ marginLeft: "70%" }}
+          style={{ marginLeft: "70%", fontFamily: "Trebuchet MS, sans-serif" }}
         >
           <NavDropdown.Item to="#action/3.4">
             <div className="signInButton">
               {!user.accessToken ? (
                 <Button variant="outline-dark">
-                  <Link to="/LogInPage" style={{ color: "black" }}>
+                  <Link to="/LogInPage" style={{ color: "grey", fontFamily: "Trebuchet MS, sans-serif" }}>
                     Sign In
                   </Link>
                 </Button>
               ) : (
                 <Button variant="outline-dark" onClick={logout}>
-                  <a to='/'>Log Out</a>
+                  <a to='/' style={{ color: "grey", fontFamily: "Trebuchet MS, sans-serif" }}>Log Out</a>
                 </Button>
               )}
             </div>
           </NavDropdown.Item>
           {!user.accessToken ? (
             <NavDropdown.Item to="#action/3.1">
-              <Link to="/SignUp" style={{ color: "black" }}>
+              <Link to="/SignUp" style={{ color: "grey", fontFamily: "Trebuchet MS, sans-serif" }}>
                 Create an Account
               </Link>
             </NavDropdown.Item>
@@ -67,7 +71,7 @@ function NavBar() {
           <NavDropdown.Divider />
           {user.accessToken ? (
             <NavDropdown.Item to="#action/3.1">
-              <Link to="/UserProfile" style={{ color: "black" }}>
+              <Link to="/UserProfile" style={{ color: "grey", fontFamily: "Trebuchet MS, sans-serif" }}>
                 My Page
               </Link>
             </NavDropdown.Item>
@@ -76,7 +80,7 @@ function NavBar() {
           )}
 
           {user.accessToken ? (
-            <NavDropdown.Item to="#action/3.4">
+            <NavDropdown.Item to="#action/3.4" style={{ color: "grey", fontFamily: "Trebuchet MS, sans-serif" }}>
               Credit Balance <h5>${user.user.creditBalance}</h5>{" "}
             </NavDropdown.Item>
           ) : (
@@ -85,7 +89,7 @@ function NavBar() {
         </NavDropdown>
 
         {user.accessToken ? (
-          <Link to="/shoppingCart">
+          <Link to="/shoppingCart" style={{ color: "grey", fontFamily: "Trebuchet MS, sans-serif" }}>
             <img
               className="cart"
               src={cartIMG}
@@ -101,7 +105,9 @@ function NavBar() {
         )}
       </Navbar>
 
-      <Navbar variant="light" style={{ backgroundColor: '#caebb7', fontFamily: "Lucida Console" }}>
+      <Navbar variant="light" style={{ 
+        // backgroundColor: '#b7caeb', 
+        fontFamily: "Trebuchet MS, sans-serif" }}>
         <Nav className="mr-auto" style={{ margin: "auto" }}>
           <Link to="/Allbooks" style={{ color: 'grey' }}><h4>| All |</h4></Link>
           <Link to="/AllArtBooks" style={{ color: 'grey' }}><h4>| Art |</h4></Link>

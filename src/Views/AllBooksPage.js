@@ -16,7 +16,7 @@ function AllBooksPage(props) {
           }
           return (
             <Card
-              style={{ width: "15rem", height: "36rem", marginBottom: "20px" }}
+            style={{ width: '13rem', height: '30rem', marginBottom: '30px'  }}
             >
               {console.log(book.Title)}
               <Link to={"./SingleBookInfo/" + book.id}>
@@ -24,7 +24,7 @@ function AllBooksPage(props) {
                   key={book.id}
                   variant="top"
                   src={book.imageUrl}
-                  style={{ height: "320px" }}
+                  style={{ height: "300px" }}
                 />
               </Link>
               <Card.Body>

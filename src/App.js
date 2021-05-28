@@ -6,7 +6,6 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./Views/Home";
 import Footer from "./Components/Footer";
 import SingleBookInfo from "./Views/SingleBookInfo";
-import Header from "./Components/Header";
 import Searchresult from "./Views/Searchresult";
 import UserProfilePage from "./Views/UserProfile";
 import Cart from "./Views/Cart";
@@ -25,7 +24,6 @@ import ThankYouPage from './Views/ThankYouPage'
 function App() {
   return (
     <div className="App">
-      <Header />
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
