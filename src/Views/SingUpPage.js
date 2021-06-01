@@ -13,7 +13,7 @@ function SignUpPage() {
     lastName: "",
     email: "",
     password: "",
-    creditBalance: 50.0,
+    creditBalance: 100.0,
   });
 
   const handleSubmit = (e) => {

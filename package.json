@@ -1,6 +1,6 @@
 {
-  "name": "kapstone-frontend-book-resale",
-  "homepage": "http://efgon.github.io/kapstone-frontend-book-resale",
+  "name": "second-chapter",
+  "homepage": "https://github.com/SecondChapter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

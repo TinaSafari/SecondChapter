@@ -15,7 +15,7 @@ function UserProfile() {
   const [user, setUser] = useState({
     firstName: "",
     lastName: "",
-    creditBalance: 50.0,
+    creditBalance: 100.0,
   });
 
   function handleSubmit(e) {

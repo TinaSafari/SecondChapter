@@ -7,7 +7,7 @@ const initState = {
     email: "",
     firstName: "",
     lastName: "",
-    creditBalance: 50.0,
+    creditBalance: 100.0,
   },
   cart: []
 };
@@ -23,6 +23,7 @@ export const UPDATEUSER = "UPDATEUSER";
 export const SIGNUP = "SIGNUP";
 export const ADDBOOK = "ADDBOOK";
 export const REMOVEBOOK = "REMOVEBOOK";
+export const CHECKOUT = "CHECKOUT";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -47,6 +48,8 @@ const reducer = (state, action) => {
       return { ...state, cart: [...state.cart, action.payload] };
     case REMOVEBOOK:
       return {...state.cart, cart: state.cart.filter((item) => item !== action.payload) };
+      case CHECKOUT:
+      return { cart: (state.cart = []) };
     default:
       return state;
   }

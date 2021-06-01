@@ -16,6 +16,12 @@ a:hover {
     width: 80%;
     padding-top: 30px;
 }
+.carousel-control-next:hover {
+    border-bottom: none;
+  }
+  .carousel-control-prev:hover {
+    border-bottom: none;
+  }
 img {
     height: 40rem;
     width: 70rem;
