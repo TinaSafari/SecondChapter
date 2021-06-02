@@ -1,10 +1,9 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Button, Form, Col } from "react-bootstrap";
 import { createUser } from "../fetchRequest";
 import { useStore, SIGNUP } from "../Store/store";
 import { useHistory } from "react-router-dom";
 import { FormErrors } from "./FormErrors";
-
 
 function SignUpPage() {
   const dispatch = useStore((state) => state.dispatch);
@@ -112,16 +111,15 @@ function SignUpPage() {
         onSubmit={handleSubmit}
         style={{ margin: "auto", width: "700px", paddingBottom: "20px" }}
       >
-        <div className="panel panel-default">
-          <FormErrors  formErrors={userData.formErrors} />
-        </div>
+        
         <Form.Row>
           <Col>
             <Form.Group as={Col}>
-              <div
+            <div
                 className={`form-group ${errorClass(
                   userData.formErrors.firstName
-                )}`}
+                )}`
+              }
               ></div>
               <Form.Control
                 type="text"
@@ -131,6 +129,8 @@ function SignUpPage() {
                 value={userData.firstName}
                 required
               />
+              
+              
             </Form.Group>
           </Col>
           <Col>
@@ -178,6 +178,7 @@ function SignUpPage() {
                 userData.formErrors.password
               )}`}
             >
+              {/* <div style={{color: "red"}}></div> */}
               <Form.Control
                 type="password"
                 name="password"
@@ -194,9 +195,12 @@ function SignUpPage() {
             <Form.Control type="password" placeholder="Re-Enter Password" />
           </Form.Group>
         </Form.Row>
-
+        <div className="panel panel-default"
+        style={{color: 'red'}}>
+          <FormErrors formErrors={userData.formErrors} />
+        </div>
         <Button variant="outline-dark" type="submit">
-          Submit
+          Sign up
         </Button>
       </Form>
     </>
