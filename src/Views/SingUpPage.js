@@ -13,11 +13,11 @@ function SignUpPage() {
     lastName: "",
     email: "",
     password: "",
-    creditBalance: 50.0,
+    creditBalance: 100.0,
   });
 
   const handleSubmit = (e) => {
-    const reRoute = (e) => history.push("/");
+    const reRoute = (e) => history.push("/LogInPage");
     console.log(
       userData.firstName,
       userData.lastName,
